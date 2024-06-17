@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-employee',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css'] // Corrected the typo in 'styleUrls'
 })
@@ -12,7 +13,7 @@ export class EmployeeComponent {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  employeeForm = this.formBuilder.group({
+  employeeForm: FormGroup = this.formBuilder.group({
     name: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]], // Added email validator
     phone: ['', Validators.required], // Added required validator for phone
