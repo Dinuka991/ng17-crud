@@ -48,7 +48,8 @@ h1 {
 
 .input:focus {
   border-color: #5a9;
-  outline: none;
+  outline
+  : none;
 }
 
 .input.invalid {
