@@ -11,25 +11,25 @@
 
   <div class="field">
     <label class="label">Email</label>
-    <input type="email" class="input" formControlName="email" [class.invalid]="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched"/>
-    <div *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched" class="error-message">
-      Enter a valid email.
+    <input type="text" class="input" formControlName="role" [class.invalid]="employeeForm.get('role')?.invalid && employeeForm.get('email')?.touched"/>
+    <div *ngIf="employeeForm.get('role')?.invalid && employeeForm.get('role')?.touched" class="error-message">
+      Enter role.
     </div>
   </div>
 
   <div class="field">
-    <label class="label">Phone</label>
-    <input type="text" class="input" formControlName="phone" [class.invalid]="employeeForm.get('phone')?.invalid && employeeForm.get('phone')?.touched"/>
-    <div *ngIf="employeeForm.get('phone')?.invalid && employeeForm.get('phone')?.touched" class="error-message">
+    <label >Phone</label>
+    <input type="text" class="input" formControlName="contactNumber" [class.invalid]="employeeForm.get('contactNumber')?.invalid && employeeForm.get('contactNumber')?.touched"/>
+    <div *ngIf="employeeForm.get('contactNumber')?.invalid && employeeForm.get('contactNumber')?.touched" class="error-message">
       Phone is required.
     </div>
   </div>
 
   <div class="field">
     <label class="label">Address</label>
-    <input type="text" class="input" formControlName="address" [class.invalid]="employeeForm.get('address')?.invalid && employeeForm.get('address')?.touched"/>
-    <div *ngIf="employeeForm.get('address')?.invalid && employeeForm.get('address')?.touched" class="error-message">
-      Address is required.
+    <input type="text" class="input" formControlName="hireDate" [class.invalid]="employeeForm.get('hireDate')?.invalid && employeeForm.get('hireDate')?.touched"/>
+    <div *ngIf="employeeForm.get('hireDate')?.invalid && employeeForm.get('hireDate')?.touched" class="error-message">
+      Hire date is required.
     </div>
   </div>
 
